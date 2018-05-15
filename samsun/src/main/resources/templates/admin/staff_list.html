@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="admin/layout :: head"></head>
+<body class="skin-blue sidebar-mini">
+<div class="wrapper">
+    
+    <header th:replace="admin/layout :: header">
+    
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside th:replace="admin/layout :: leftbar"></aside>
+    
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-12">
+                    
+                    <div class="box">
+                        <div class="box-header">
+                            <h3 class="box-title">List Patient</h3>
+                        </div><!-- /.box-header -->
+                        <div class="box-body">
+                            <span th:if="${uploadsuccess}" style="color: red" th:text="${uploadsuccess}"></span>
+                            <table id="example1" class="table table-bordered table-striped">
+                                <thead>
+                                <tr>
+                                    <th style="width: 90px">Oder Date</th>
+                                    <th  style="width: 100px" >Chart No</th>
+                                    <th>Clinic Name</th>
+                                    <th>Patient Name</th>
+                                    <th>Status</th>
+                                    <th  style="width:82px">Show Images</th>
+                                    <th  style="width:95px">Upload Images</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="patient : ${patients}" >
+                                    <td th:text="${#dates.format(patient.createdDate, 'HH:mm dd/MM/yyyy')}"></td>
+                                    <td th:text="${patient.chartNo}"></td>
+                                    <td th:text="${patient.user.clinicName}"></td>
+                                    <td ><a th:href="@{/admin/patient/{id}/edit(id=${patient.id})}"><span th:text="${patient.name}"></span></a></td>
+                                    <td ><i th:if="${#strings.toString(patient.status)}== 'WAITING'" class="fa fa-spinner fa-spin" style="font-size:24px"></i> <i th:if="${#strings.toString(patient.status)}== 'FINISHED'" style="font-size:24px" class="fa">&#xf14a;</i></td>
+                                    <td>
+                                        <a th:href="@{/admin/patient/{id}/images2(id=${patient.id})}" class="btn btn-primary">Show Image</a>
+                                    </td>
+                                    <td><a th:href="@{/admin/{id}/upload(id=${patient.id})}" class="btn btn-danger" >Upload</a></td>
+                                </tr>
+
+                                </tbody>
+                            
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div><!-- /.box -->
+                    
+               
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </section><!-- /.content -->
+    </div><!-- /.content-wrapper -->
+    <footer th:replace="admin/layout :: footer"></footer>
+
+
+</div><!-- ./wrapper -->
+
+<!-- jQuery 2.1.4 -->
+<script th:src="@{/assets/jQuery/jQuery-2.1.4.min.js}" src="./assets/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+<!-- Bootstrap 3.3.2 JS -->
+<script th:src="@{/assets/bootstrap/js/bootstrap.min.js}" src="./assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- DATA TABES SCRIPT -->
+<script th:src="@{/assets/datatables/jquery.dataTables.min.js}" src="./assets/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script th:src="@{/assets/datatables/dataTables.bootstrap.min.js}" src="./assets/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<!-- SlimScroll -->
+<script th:src="@{/assets/slimScroll/jquery.slimscroll.min.js}" src="./assets/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- FastClick -->
+<script th:src="@{/assets/fastclick/fastclick.min.js}" src="./assets/fastclick/fastclick.min.js" type="text/javascript"></script>
+<!-- AdminLTE App -->
+<script th:src="@{/public/js/app.min.js}" src="./public/js/app.min.js" type="text/javascript"></script>
+<!-- AdminLTE for demo purposes -->
+<script th:src="@{/public/js/demo.js}" src="./public/js/demo.js" type="text/javascript"></script>
+<!-- page script -->
+<script type="text/javascript">
+    $(function () {
+        $('.table').DataTable({
+            "paging": true,
+            "order":[[0, 'DESC']]
+        });
+    });
+</script>
+</body>
+</html>

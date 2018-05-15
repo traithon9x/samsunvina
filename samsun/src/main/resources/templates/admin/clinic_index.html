@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="admin/layout :: head"></head>
+  
+  <body class="skin-blue sidebar-mini">
+    <div class="wrapper">
+
+      <header th:replace="admin/layout :: header"></header>
+      <!-- Left side column. contains the logo and sidebar -->
+      <aside th:replace="admin/layout :: leftbar"></aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="row" style="margin:0px;">
+    
+          <div class="">
+            <div class="box">
+              <div class="box-header with-border">
+                <h3 class="box-title">Dashboard</h3>
+              </div><!-- /.box-header -->
+              <div class="box-body">
+                <section class="content">
+  
+                  
+                  <!-- Small boxes (Stat box) -->
+                  <div class="row col-md-12" >
+              
+                    <div class=" col-md-6 col-xs-12 col-sm-6">
+                      <!-- small box -->
+                      <div class="small-box bg-yellow" >
+                        <div class="inner">
+                          <h3 th:text="${countmonth}"></h3>
+                          <p>Số Lượng Bệnh Nhân Trong tháng</p>
+                        </div>
+                        <div class="icon">
+                          <i class="ion ion-person"></i>
+                        </div>
+                        <a  class="small-box-footer" style="height:20px;"></a>
+                      </div>
+                    </div><!-- ./col -->
+  
+                    <div class=" col-md-6 col-xs-12 col-sm-6">
+                      <!-- small box -->
+                      <div class="small-box bg-yellow" >
+                        <div class="inner">
+                          <h3 th:text="${count3month}">30</h3>
+                          <p>Số Lượng Bệnh Nhân Trong quý</p>
+                        </div>
+                        <div class="icon">
+                          <i class="ion ion-person"></i>
+                        </div>
+                        <a  class="small-box-footer" style="height:20px;"></a>
+                      </div>
+                    </div><!-- ./col -->
+
+                  </div><!-- /.row -->
+                  <div class="row col-md-12" >
+                    <div class="box-body">
+                      <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                        <tr>
+                          <th>Patient Name</th>
+                          <th>Comment</th>
+                          <th>Reply</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="listpatient : ${listpatient}" th:if="${listpatient.comment}">
+                          <td ><p th:text="${listpatient.name}"></p></td>
+                          <td><p th:text="${listpatient.comment}"></p></td>
+                          <td><p th:text="${listpatient.reply}"></p></td>
+        
+        
+                        </tr>
+        
+        
+        
+        
+                        </tbody>
+      
+                      </table>
+    
+                    </div>
+                  </div>
+                </section>
+              
+                
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div><!-- /.content-wrapper -->
+      
+  
+  
+      <footer th:replace="admin/layout :: footer"></footer>
+      <!-- Add the sidebar's background. This div must be placed
+           immediately after the control sidebar -->
+      <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+
+    <!-- jQuery 2.1.4 -->
+    <script th:src="@{/assets/jQuery/jQuery-2.1.4.min.js}" src="./assets/jQuery/jQuery-2.1.4.min.js" type="text/javascript"></script>
+    <!-- Bootstrap 3.3.2 JS -->
+    <script th:src="@{/assets/bootstrap/js/bootstrap.min.js}" src="./assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- DATA TABES SCRIPT -->
+    <script th:src="@{/assets/datatables/jquery.dataTables.min.js}" src="./assets/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script th:src="@{/assets/datatables/dataTables.bootstrap.min.js}" src="./assets/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <!-- SlimScroll -->
+    <script th:src="@{/assets/slimScroll/jquery.slimscroll.min.js}" src="./assets/slimScroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <!-- FastClick -->
+    <script th:src="@{/assets/fastclick/fastclick.min.js}" src="./assets/fastclick/fastclick.min.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+    <script th:src="@{/public/js/app.min.js}" src="./public/js/app.min.js" type="text/javascript"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script th:src="@{/public/js/demo.js}" src="./public/js/demo.js" type="text/javascript"></script>
+    <!-- page script -->
+    <script type="text/javascript">
+        $(function () {
+            $('.table').DataTable({
+                "paging": true,
+                "order":[[0, 'desc']]
+            });
+        });
+    </script>
+  </body>
+</html>

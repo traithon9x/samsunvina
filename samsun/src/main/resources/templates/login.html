@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=vietnamese"
+          rel="stylesheet"/>
+    
+    <link href="./assets/bootstrap/css/bootstrap.min.css" th:href="@{/assets/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" type="text/css"/>
+    <link  th:href="@{/public/css/style_login.css}"
+          rel="stylesheet" type="text/css"/>
+    
+    <style type="text/css">
+        #signin-page {
+            background: url('public/img/credit/8f9f250e-7843-4920-821e-635141926a06.jpg') center center fixed !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            
+        }
+    </style>
+</head>
+
+<body id="signin-page">
+
+
+
+<div class="page-form">
+    <form th:action="@{/login}" th:method="post" th:object="${loginModel}" class="form" id="formLogin" method="post" role="form"><input id="ReturnUrl" name="ReturnUrl" type="hidden" value="/" />
+        <div class="header-content text-center">
+        <img alt="SAMSUN VINA" src="public/img/credit/7742dcd3-4080-43b1-a7a9-94b66dedc9db.png"/>
+            <p th:if="${param.error}" class="alert alert-danger">Tên đăng nhập hoặc mật khẩu không đúng!</p>
+            <p th:if="${#fields.hasErrors()}" th:errors="*{username}">Tài khoản chưa được kích hoạt!</p>
+            
+            <p th:text="${notactive}" ></p>
+        </div>
+        <div class="body-content">
+            <div class="validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+            </ul></div>
+            
+            <div id="divNotifyContainer">
+                <div id="notifyError" class="alert alert-danger alert-dismissable" style="display: none;">
+                    <button aria-hidden="true" onclick="$(this).parent().hide();" class="close" type="button">×</button>
+                    <div content=""></div>
+                </div>
+                <div id="notifySuccess" class="alert alert-success alert-dismissable" style="display: none;">
+                    <button aria-hidden="true" onclick="$(this).parent().hide();" class="close" type="button">×</button>
+                    <div content=""></div>
+                </div>
+                <div id="notifyWarning" class="alert alert-warning alert-dismissable" style="display: none;">
+                    <button aria-hidden="true" onclick="$(this).parent().hide();" class="close" type="button">×</button>
+                    <div content=""></div>
+                </div>
+                <div id="notifyInformation" class="alert alert-info alert-dismissable" style="display: none;">
+                    <button aria-hidden="true" onclick="$(this).parent().hide();" class="close" type="button">×</button>
+                    <div content=""></div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="form-group">
+                <div class="input-icon right">
+                    <i class="fa fa-user"></i>
+                    <input type="text" th:field="*{username}" name="username" class="form-control" placeholder="Username"   />
+                    <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Tên đăng nhập không hợp lệ!</p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-icon right">
+                    <i class="fa fa-key"></i>
+                    <input type="password" th:field="*{password}" name="password" class="form-control" placeholder="Password"  AUTOCOMPLETE="off"/>
+                    <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Mật khẩu không hợp lệ!</p>                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-7 pl0">
+                    <div class="checkbox-list">
+                        <label>
+                            <input checked="checked" data-val="true" data-val-required="The Remember me field is required." id="Remember" name="Remember" type="checkbox" value="true" />&nbsp;
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-5 pr0">
+                    <button type="submit"  class="btn btn-success pull-right">Sign In&nbsp;<i class="fa fa-chevron-circle-right"></i></button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            
+           
+            
+            
+            
+            <div class="clearfix"></div>
+        </div>
+    </form></div>
+
+
+
+</body>
+</html>

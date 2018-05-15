@@ -1,0 +1,21 @@
+use samsun;
+-- SET FOREIGN_KEY_CHECKS = 0;
+-- TRUNCATE TABLE role;
+-- TRUNCATE TABLE account;
+-- TRUNCATE TABLE user;
+-- TRUNCATE TABLE patient;
+-- TRUNCATE TABLE city;
+-- TRUNCATE TABLE township;
+-- SET FOREIGN_KEY_CHECKS = 1;
+--
+-- INSERT INTO role(name) VALUES ('ROLE_ADMIN'), ('ROLE_STAFF'), ('ROLE_CLINIC');
+--
+-- INSERT INTO account (username, password, role_id) VALUES ('hoanglongckd', '$2a$06$iJOvJ3.DwOqBFQbXVsNK5uWqg9qBGMP3qKn8D69ZKf4NY8N.UPdlq', 1);
+--
+-- INSERT INTO user (status, birthday, full_name, gender, account_id) VALUES ('ACTIVE', '1994/02/15', 'Tran Hoang Long', 'Male', 1);
+--
+-- INSERT INTO patient (status, chart_no, name, user_id) VALUES ('ACTIVE', '0001', 'Khanh Hoang', 1);
+--
+-- INSERT INTO city (status, name) VALUES ('ACTIVE', 'Đà Nẵng'), ('ACTIVE', 'Hồ Chí Minh');
+--
+-- INSERT INTO township (status, acronym, name, city_id) VALUES ('ACTIVE', 'TK', 'Thanh Khê', 1), ('ACTIVE', 'HC', 'Hải Châu', 1), ('ACTIVE', 'TD', 'Thủ Đức', 2), ('ACTIVE', 'TB', 'Tân Bình', 2);

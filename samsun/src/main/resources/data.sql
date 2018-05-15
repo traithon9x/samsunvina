@@ -1,0 +1,120 @@
+USE samsun;
+-- INSERT INTO role (id, name)
+-- VALUES (1, 'ROLE_ADMIN'), (2, 'ROLE_STAFF'), (3, 'ROLE_CLINIC');
+--
+--
+--
+-- INSERT INTO account (id, username, password, role_id)
+-- VALUES (1, 'admin', '$2a$06$iJOvJ3.DwOqBFQbXVsNK5uWqg9qBGMP3qKn8D69ZKf4NY8N.UPdlq', 1),
+-- (2, 'levanha', '$2a$06$iJOvJ3.DwOqBFQbXVsNK5uWqg9qBGMP3qKn8D69ZKf4NY8N.UPdlq', 3);
+--
+--
+--
+-- INSERT INTO xray (id,name)
+-- VALUES (1,'CT Toàn Hàm'), (2,'Panorama'), (3,'Cephalo Nghiêng'), (4,'Cephalo Thẳng'), (5,'Bàn Tay'), (6,'In Ra Giấy Tỉ Lệ (1:1)'), (7,'Gửi mail'), (8,'Vẽ Ống Dây Thần Kinh'), (9,'Vẽ Cross-section'), (10,'Kết Hợp Làm Máng Phẫu Thuật(Implant guide)') ;
+--
+--
+--
+-- INSERT INTO city (id, name)
+-- VALUES
+-- (1, 'Việt Nam'),
+-- (2, 'An Giang'),
+-- (3, 'Bà Rịa Vũng Tàu'),
+-- (4, 'Bình Dương'),
+-- (5, 'Bình Phước'),(6, 'Bình Thuận'),
+-- (7, 'Bình Định'),
+-- (8, 'Bắc Giang'),
+-- (9, 'Bắc Kạn'),
+-- (10, 'Bắc Ninh'),
+-- (11, 'Bến Tre'),
+-- (12, 'Cao Bằng'),
+-- (13, 'Cà Mau'),
+-- (14, 'Cần Thơ'),
+-- (15, 'Gia Lai'),
+-- (16, 'Hà Giang'),
+-- (17, 'Hà Nam'),
+-- (18, 'Hà Nội'),
+-- (19, 'Hà Tĩnh'),
+-- (20, 'Hòa Bình'),
+-- (21, 'Hưng Yên'),
+-- (22, 'Hải Dương'),
+-- (23, 'Hải Phòng'),
+-- (24, 'Hồ Chí Minh'),
+-- (25, 'Khánh Hòa'),
+-- (26, 'Kiên Giang'),
+-- (27, 'Kon Tum'),
+-- (28, 'Lai Châu'),
+-- (29, 'Long An'),
+-- (30, 'Lào Cai'),
+-- (31, 'Lâm Đồng'),
+-- (32, 'Lạng Sơn'),
+-- (33, 'Nam Định'),
+-- (34, 'Nghệ An'),
+-- (35, 'Ninh Bình'),
+-- (36, 'Ninh Thuận'),
+-- (37, 'Phú Thọ'),
+-- (38, 'Phú Yên'),
+-- (40, 'Quảng Nam'),
+-- (41, 'Quảng Ngãi'),
+-- (42, 'Quảng Ninh'),
+-- (43, 'Quảng Trị'),
+-- (44, 'Sơn La'),
+-- (45, 'Thanh Hóa'),
+-- (46, 'Thái Bình'),
+-- (47, 'Thái Nguyên'),
+-- (48, 'Thừa Thiên Huế'),
+-- (49, 'Tiền Giang'),
+-- (50, 'Trà Vinh'),
+-- (51, 'Tuyên Quang'),
+-- (52, 'Tây Ninh'),
+-- (53, 'Vĩnh Long'),
+-- (54, 'Vĩnh Phúc'),
+-- (55, 'Yên Bái'),
+-- (56, 'Đà Nẵng'),
+-- (57, 'Đắk Lắk'),
+-- (58, 'Đồng Nai'),
+-- (59, 'Đồng Tháp'),
+-- (60, 'Bạc Liêu'),
+-- (61, 'Sóc Trăng'),
+-- (62, 'Hậu Giang'),
+-- (63, 'Đắk Nông'),
+-- (64, 'Điện Biên');
+--
+--
+--
+-- INSERT INTO township (id,name,acronym,city_id)
+-- VALUES
+-- (1,'Hải Châu','HC',56),
+-- (3,'Thanh Khê','TK',56),
+-- (4,'Sơn Trà','ST',56),
+-- (5,'Ngũ Hành Sơn','NHS',56),
+-- (6,'Cẩm Lệ','CL',56),
+-- (7,'Quận 1','Q1',24),
+-- (8,'Quận 2','Q2',24),
+-- (9,'Quận 3','Q3',24),
+-- (10,'Quận 4','Q4',24),
+-- (11,'Quận 5','Q5',24),
+-- (12,'Quận 6','Q6',24),
+-- (13,'Quận 7','Q7',24),
+-- (14,'Quận 8','Q8',24),
+-- (15,'Quận 9','Q9',24),
+-- (16,'Quận 10','Q10',24),
+-- (17,'Quận 11','Q11',24),
+-- (18,'Quận Thủ Đức','TD',24),
+-- (19,'Quận Gò Vấp','GV',24),
+-- (20,'Quận Bình Thạch','BT',24),
+-- (21,'Quận Tân Bình','TB',24),
+-- (22,'Quận Tân Phú','TP',24),
+-- (23,'Quận Phú Nhuận','PN',24),
+-- (24,'Quận Bình Tân','BTAN',24);
+--
+-- INSERT INTO rc (id, name, address, phone, township_id)
+-- VALUES
+-- (1, 'RC3','137 Ông Ích Khiêm','02363896660',1);
+--
+--
+-- INSERT INTO user (id, fullName, birthday, gender, clinic, address, hardphone, phone, email, dentalchair, speciality, employee, account_id, township_id, rc_id,chart_no)
+-- VALUES (1, 'Lê Văn Hà', '08-07-17', 'male', 'Lê Văn Hà', '298 Quang Trung', '02363896660','0982944224','levanha@gmail.com',1, 'implant',2,2,1,1,'HC_0001');
+--
+--
+
